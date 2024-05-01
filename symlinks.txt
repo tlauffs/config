@@ -1,0 +1,2 @@
+ln -sf ~/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+ln -sf ~/config/nvim/init.lua ~/.config/nvim/init.lua
