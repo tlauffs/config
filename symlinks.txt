@@ -1,2 +1,4 @@
+mkdir -p ~/.config/tmux
 ln -sf ~/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+mkdir -p ~/.config/nvim
 ln -sf ~/config/nvim/init.lua ~/.config/nvim/init.lua
