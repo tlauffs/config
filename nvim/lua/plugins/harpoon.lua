@@ -30,7 +30,7 @@ return {
 		end, { desc = "harpoon add" })
 		vim.keymap.set("n", "<leader>h", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end)
+		end, { desc = "open harpoon menu" })
 		vim.keymap.set("n", "<leader>sp", function()
 			toggle_telescope(harpoon:list())
 		end, { desc = "[S]earch har[P]" })
