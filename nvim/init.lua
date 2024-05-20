@@ -61,6 +61,9 @@ require("lazy").setup({
 	require("plugins.vimtmuxnav"),
 	require("plugins.oil"),
 	require("plugins.harpoon"),
+	require("plugins.autopairs"),
+	require("plugins.indentline"),
+	require("plugins.lint"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
