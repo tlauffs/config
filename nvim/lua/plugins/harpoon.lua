@@ -33,7 +33,7 @@ return {
 		end, { desc = "open harpoon menu" })
 		vim.keymap.set("n", "<leader>sp", function()
 			toggle_telescope(harpoon:list())
-		end, { desc = "[S]earch har[P]" })
+		end, { desc = "[S]earch har[P]oon" })
 		vim.keymap.set("n", "<leader>1", function()
 			harpoon:list():select(1)
 		end, { desc = "harpoon jump 1" })

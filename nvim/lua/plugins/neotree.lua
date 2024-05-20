@@ -9,7 +9,7 @@ return {
 	cmd = "Neotree",
 	keys = {
 		{
-			"<leader>r",
+			"<leader>t",
 			function()
 				require("neo-tree.command").execute({
 					toggle = true,
