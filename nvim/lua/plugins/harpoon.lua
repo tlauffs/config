@@ -46,5 +46,14 @@ return {
 		vim.keymap.set("n", "<leader>4", function()
 			harpoon:list():select(4)
 		end, { desc = "harpoon jump 4" })
+		vim.keymap.set("n", "<leader>5", function()
+			harpoon:list():select(5)
+		end, { desc = "harpoon jump 5" })
+		vim.keymap.set("n", "<leader>6", function()
+			harpoon:list():select(6)
+		end, { desc = "harpoon jump 6" })
+		vim.keymap.set("n", "<leader>7", function()
+			harpoon:list():select(7)
+		end, { desc = "harpoon jump 7" })
 	end,
 }
