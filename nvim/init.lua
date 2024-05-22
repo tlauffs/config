@@ -68,6 +68,7 @@ require("lazy").setup({
 	require("plugins.visual-multi"),
 	require("plugins.trouble"),
 	require("plugins.fugative"),
+	require("plugins.flash"),
 	-- require("plugins.noice"),
 }, {
 	ui = {
