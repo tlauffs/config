@@ -16,6 +16,10 @@ vim.api.nvim_set_keymap("v", "<leader>d", '"_d', { noremap = true })
 vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true })
 vim.api.nvim_set_keymap("v", "x", '"_x', { noremap = true })
 
+-- rebind opening new splits
+vim.api.nvim_set_keymap("n", "<leader>p", ":split<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>o", ":vsplit<CR>", { noremap = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
