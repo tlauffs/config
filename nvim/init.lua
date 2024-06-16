@@ -63,13 +63,13 @@ require("lazy").setup({
 	require("plugins.harpoon"),
 	require("plugins.autopairs"),
 	require("plugins.indentline"),
-	require("plugins.lint"),
+  require("plugins.lint"),
 	require("plugins.lualine"),
 	require("plugins.visual-multi"),
 	require("plugins.trouble"),
 	require("plugins.fugative"),
 	require("plugins.flash"),
-	-- require("plugins.noice"),
+	--   require("plugins.noice"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
