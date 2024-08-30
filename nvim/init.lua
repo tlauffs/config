@@ -69,7 +69,7 @@ require("lazy").setup({
 	require("plugins.trouble"),
 	require("plugins.fugative"),
 	require("plugins.flash"),
-	--   require("plugins.noice"),
+	-- require("plugins.noice"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

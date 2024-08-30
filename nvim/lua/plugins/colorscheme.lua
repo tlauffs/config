@@ -1,3 +1,5 @@
+vim.g.gruvbox_baby_transparent_mode = 1
+
 return {
 	-- You can easily change to a different colorscheme.
 	-- Change the name of the colorscheme plugin below, and then
@@ -10,8 +12,5 @@ return {
 	-- opts = {},
 	init = function()
 		vim.cmd.colorscheme("gruvbox-baby")
-		vim.cmd.hi("Comment gui=none")
-		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	end,
 }
