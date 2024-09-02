@@ -6,11 +6,20 @@ return {
 	-- change the command in the config to whatever the name of that colorscheme is.
 	--
 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-	"luisiacc/gruvbox-baby",
-	priority = 1000, -- Make sure to load this before all the oher start plugins.
+	
+	-- "luisiacc/gruvbox-baby",
 	-- config = true,
 	-- opts = {},
-	init = function()
-		vim.cmd.colorscheme("gruvbox-baby")
-	end,
+	-- priority = 1000, 
+	{
+		"catppuccin/nvim", 
+		name = "catppuccin", 
+		priority = 1000,  -- Missing comma is added here
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true, 
+			})
+			vim.cmd.colorscheme("catppuccin")
+		end,
+	},
 }
