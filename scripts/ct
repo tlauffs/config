@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#Script that uses zoxide query to auto start or attach to a tmux session
-
+# Function to start or attach to a tmux session
 dir=$(zoxide query -i "$1")
 
 # Check if zoxide found a directory
@@ -10,8 +9,14 @@ if [ -z "$dir" ]; then
   exit 1
 fi
 
-# Create a session name using the last folder name
+# Get the last folder name for the session name
 session_name=$(basename "$dir")
 
-# Use tmux to create or attach to the session
-tmux new -As "$session_name" -c "$dir"
+# Check if already in a tmux session
+if [ -n "$TMUX" ]; then
+  # Attach to the existing session
+  tmux switch-client -t "$session_name" || tmux new-session -s "$session_name" -c "$dir"
+else
+  # Create a new tmux session in the directory
+  tmux new-session -s "$session_name" -c "$dir"
+fi
