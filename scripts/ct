@@ -17,7 +17,6 @@ if [ -n "$TMUX" ]; then
     # detach to avoid nesting
     tmux new -d -s "$session_name" -c "$dir"
     tmux switch-client -t "$session_name"
-  fi
 else
   # Create or attach to a tmux session in the directory
   tmux new -As "$session_name" -c "$dir"
