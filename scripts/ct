@@ -18,9 +18,9 @@ tmux_session_name=${session_name/#./_}
 # Check if already in a tmux session
 if [ -n "$TMUX" ]; then
     # detach to avoid nesting
-    tmux new -d -s "$session_name" -c "$dir"
-    tmux switch-client -t "$session_name"
+    tmux new -d -s "$tmux_session_name" -c "$dir"
+    tmux switch-client -t "$tmux_session_name"
 else
   # Create or attach to a tmux session in the directory
-  tmux new -As "$session_name" -c "$dir"
+  tmux new -As "$tmux_session_name" -c "$dir"
 fi
