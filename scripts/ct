@@ -14,9 +14,16 @@ session_name=$(basename "$dir")
 
 # Check if already in a tmux session
 if [ -n "$TMUX" ]; then
-  # Attach to the existing session
-  tmux switch-client -t "$session_name" || tmux new-session -s "$session_name" -c "$dir"
+  # Try to switch to the existing session
+  if tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux switch-client -t "$session_name"
+  else
+    # detach to avoid nesting
+    tmux detach
+    # Create a new session in the specified directory
+    tmux new- -s "$session_name" -c "$dir"
+  fi
 else
-  # Create a new tmux session in the directory
-  tmux new-session -s "$session_name" -c "$dir"
+  # Create or attach to a tmux session in the directory
+  tmux new -As "$session_name" -c "$dir"
 fi
