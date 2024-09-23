@@ -15,7 +15,7 @@ session_name=$(basename "$dir")
 # Replace leading dot with underscore for tmux session name
 tmux_session_name=${session_name/#./_}
 
-# Check if already in a tmux session
+cd $dir
 if [ -n "$TMUX" ]; then
     # detach to avoid nesting
     tmux new -d -s "$tmux_session_name" -c "$dir"
