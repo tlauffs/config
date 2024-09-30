@@ -41,5 +41,4 @@ vim.defer_fn(function()
     end
 end, 0)
 
-
 return plugins
